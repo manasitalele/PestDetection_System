@@ -29,3 +29,4 @@ static/vendor
 /models/model.h5
 /models/pest_final_model.h5
 /models/pest_model_vgg.h5
+/static/Risk_zone_map/
