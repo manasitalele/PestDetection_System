@@ -1,0 +1,99 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PlantDoc-Pest Identify</title>
+
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+
+    <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="static/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="static/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="static/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="static/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="static/vendor/aos/aos.css" rel="stylesheet">
+
+
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">      
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #009970;">
+        <div class="container">
+            <h1><a class="text-white" href="#"><span>PlantDoc</span></a></h1>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+                <nav class="nav-menu d-none d-lg-block">
+                    
+                    <ul>
+                    <form class="form-inline my-1 my-lg-4">
+                        <a href="{{url_for('pest_manage')}}" type="button" class="btn btn-outline-light">Control Management</a>
+                        <a href="index.html" type="button" class="ml-3 btn btn-outline-light">Home</a>
+                    </form>
+                    </ul>
+                  </nav><!-- .nav-menu -->
+         
+            
+
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div id="content" style="margin-top:2em">
+            <h1>Pest Identification</h1>
+            <h4>Upload the image of pest to identify </h4>
+
+    <div>
+        <form id="upload-file" method="post" enctype="multipart/form-data">
+            <label for="imageUpload" class="upload-label">
+                Upload
+            </label>
+            <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+        </form>
+
+    <div class="image-section" style="display:none;">
+        <div class="img-preview">
+            <div id="imagePreview">
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Predict!</button>
+        </div>
+    </div>
+
+    <div class="loader" style="display:none;"></div>
+   
+    <h3 id="result">
+        <span>
+        </span>
+    </h3>
+
+        </div>
+    </div>
+
+<footer class="page-footer font-small fixed-bottom">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="https://mdbootstrap.com/"> PlantDoc</a>
+    </div>
+    <!-- Copyright -->
+
+  <!-- Footer -->
+    <script src="{{ url_for('static', filename='js/pest_upload.js') }}" type="text/javascript"></script>    
+</footer>
+</body>
+</html>
