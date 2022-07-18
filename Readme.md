@@ -64,6 +64,12 @@ Within the activated environment, use following command for installation of flas
 #### Install Flask
      pip install flask
 
+#### gevent 20.5.0
+    pip install gevent
+
+#### werkzeug 1.0.1
+    pip install werkzeug
+
 ### Conclusion
 ![alt text](Images/homescreen.png)
 
