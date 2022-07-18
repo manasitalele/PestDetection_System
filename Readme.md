@@ -90,5 +90,5 @@ Within the activated environment, use following command for installation of flas
 
 **Prediction of Armyworm Severity regions in Maharashtra State**
 ![alt text](Images/army_etl.png)
-### Detail Documentation Link
-[Detail Documentation](Document.md)
+### Link
+[Other Details related to dataset and flow of the system](Document.md)
